@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <title>City Clicker</title>
+
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="dist/main.css">
+
+
+  <script src="lib/pixi.dev.js"></script>
+  <script src="lib/tween.min.js"></script>
+  <script src="lib/react-0.11.0.js"></script>
+  <script src="lib/lz-string-1.3.3.js"></script>
+
+  
+  <script src="dist/citygame.min.js"></script>
+
+  <!-- Google analytics -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-50822016-1', 'giraluna.github.io');
+    ga('send', 'pageview');
+
+  </script>
+
+</head>
+<body>
+<div id="main">
+
+  <div id="react-container"></div>
+
+  <div id="pixi-container">
+    <!-- <canvas></canvas> -->
+  </div>
+   
+  <div id="side-menu" class="debug-hidden">
+    <!-- The real side menu is under react-container. This is kept here for debug and laziness purposes -->
+    <select name="editmode" id="editmode-select">
+      <option value="edit-world">edit</option>
+      <option value="play">play</option>
+    </select>
+    <div id="tool-buttons" class="edit-world">
+      <button id="regen-world">regen</button>
+
+      <button id="grassBtn">grass</button>
+      <button id="waterBtn">water</button>
+      <button id="sandBtn">sand</button>
+      <button id="snowBtn">snow</button>
+      <button id="plantBtn">plant</button>
+      <button id="houseBtn">house</button>
+      <button id="roadBtn">road</button>
+      <button id="subwayBtn">subway</button>
+      
+    </div>
+    <button id="removeBtn">remove</button>
+    <div id="action-buttons" class="play">
+      <button id="recruitBtn"><u>r</u>ecruit</button>
+      <button id="buyBtn">b<u>u</u>y</button>
+      <button id="buildBtn"><u>b</u>uild</button>
+    </div>
+
+    <div id="other-buttons">
+
+      <select name="board" id="board-select">
+      </select>
+
+      <select name="mapmode" id="mapmode-select">
+        <option value="default">terrain</option>
+        <option value="landValue">value</option>
+        <option value="underground">underground</option>
+      </select>
+  
+      
+
+      <form id="zoom">
+        <input type="number" id="zoom-amount" value=1 step=0.1>
+        <button id="zoomBtn">zoom</button>
+      </form>
+      <br>
+      <div id ="load-buttons">
+        <button id="saveBtn">save</button>
+        <button id="loadBtn">load</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="bottom-menu">
+  <div id="date"></div>
+
+  <div id="speed" class="debug-hidden">
+    <label for="speed-control">Speed</label>
+    <input type="range" id="speed-control" value="1" min="0" max="5" step="1">
+  </div>
+
+ <!--
+  <label for="draw-click-popups">Click popups</label>
+  <input type="checkbox" id="draw-click-popups" name="draw-click-popups" checked="true">
+-->
+
+  <a id="show-options" class="bottom-link" href="#">Options</a>
+  <a id="show-stats" class="bottom-link" href="#">Stats</a>
+  <a id="show-changelog" class="bottom-link" href="#">Changelog</a>
+  <a id="show-info" class="bottom-link" href="#">About</a>
+</div>
+
+<div id="info-container" class="fullscreen-popup-wrapper" style="display: none">
+  <div class="fullscreen-popup">
+    <div id="info-window">
+      <!--<span>This game is inspired by <a href="http://www.booming.jp/index.html" target="_blank" onclick="ga('send','event','Outgoing Links','booming.jp')">BOOMING</a> &amp; <a href="http://orteil.dashnet.org/cookieclicker/" target="_blank" onclick="ga('send','event','Outgoing Links','orteil.dashnet.org')">Cookie Clicker</a> </span>
+      <br>
+      <br>-->
+      <span>Github: <a href="https://www.github.com/giraluna/citygame" target="_blank" onclick="ga('send','event','Outgoing Links','github.com')">https://www.github.com/giraluna/citygame</a></span>
+      <br>
+      <br>
+      <span>Currently only up to date desktop versions of Chrome, Opera, Internet Explorer and Firefox are supported.</span>
+      <br>
+      <br>
+      <span>If the game isn't loading properly, try clearing your browser cache. (Ctrl + F5 on most browsers)</span>
+      <br>
+      <span>If the game still doesn't work, please report the issue on Github</span>
+      <br>
+      <br>
+      <span>Ctrl + click, middle mouse, or right mouse to scroll map</span>
+      <br>
+      <span>Scroll wheel to zoom</span>
+      <br>
+      <br>
+      <span>B: Select last selected building type</span>
+      <br>
+      <span>C: Select clicking</span>
+      <br>
+      <span>R: Recruit new employees</span>
+      <br>
+      <span>U: Buy plot</span>
+      <br>
+      <span>S: Sell plot</span>
+
+      <a id="close-info" class="close-popup" href="#">X</a>
+    </div>
+  </div>
+</div>
+
+</body>
+

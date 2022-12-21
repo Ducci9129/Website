@@ -1,0 +1,12 @@
+*sublime-project
+*sublime-workspace
+*bat
+*pdn
+*.old
+*js.map
+*jsx
+*.blend[12345]
+*.dmp
+node_modules
+*.pyc
+*.py

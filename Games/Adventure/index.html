@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Late Night Home</title>
+	<link href="css/style.css" rel="stylesheet">
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+</head>
+<body onload="onLoad()">
+<div id="music">
+	<audio src="" id="srcmusic" type="audio/mpeg" autoplay hidden>
+</div>
+<div id="music1">
+	<audio src="./sounds/music1.mp3" type="audio/mpeg" autoplay loop hidden>
+</div>
+
+<h1 id="title">Late Night Home</h1>
+
+<div id="tooltip"><img id="infoimg" src="img/info.png">
+  <span id="tooltiptext">Je zit een avondje tv te kijken. Tot de stroom uitvalt. Je krijgt verschillende opties tijdens het spel en je moet de juiste kiezen.</span>
+</div>
+
+<div class="container">
+
+	<div id="status"></div>
+
+	<div id="level_title">Start</div>
+
+	<div class="nav">
+
+		<button id="option1" class="" onclick="level1()">Start</button>
+
+		<button id="option2" onclick="level2()">Verder</button>
+		
+		<button id="option3" onclick=""></button>
+
+		<button id="option4" onclick=""></button>
+		
+		<p id="text"></p>
+
+		<p id="lichttext"></p>
+
+		<img id="zaklamp" src="./img/zaklamp.png">
+
+		<img id="sleutels" src="./img/sleutels.png">
+
+		<img id="licht" src="./img/licht.jpg">
+
+		<img id="handschoenen" src="./img/handschoenen.png">
+
+		<img id="politieauto1" src="./img/politieauto1.jpg">
+
+		<img id="politieauto2" src="./img/politieauto2.jpg">
+
+		<img id="dief" src="./img/dief.jpg">
+
+		<div id="warning"></div>
+
+	</div>
+
+</div>
+
+	<script src="js/game.js" type="text/javascript" ></script>
+
+</body>
+</html>

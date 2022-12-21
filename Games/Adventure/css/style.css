@@ -1,0 +1,198 @@
+@font-face {
+    font-family: startfont;
+    src: url(../fonts/youmurdererbb_reg.ttf);
+}
+
+* {
+	padding: 0px;
+	margin: 0px;
+}
+
+body {
+	background-color: silver;
+	font-family: sans-serif;
+	background-image: url(../img/home.jpg);
+	background-size: cover;
+}
+
+#level_title {
+	display: none;
+	font-size: 18px
+	color: black;		
+	font-weight: bold;
+}
+
+#level_image {
+}
+
+h1 {
+	font-size: 100px;
+	color: black;
+	font-family: angryblue;
+	-webkit-text-stroke: 1px white;
+	position: absolute;
+	top: 80px;
+	left: 380px;
+}
+
+#startbutton:hover {
+	background-color: rgba(181, 179, 255, 0.1);
+	border: none;
+    border-radius: 3px;
+}
+
+#lichttext {
+	display: none;
+	color: blue;
+}
+
+.option1 {
+	position: absolute;
+	top: 370px;
+	left: 700px;
+	width: 150px;
+	border: none;
+	background: none;
+	font-family: startfont;
+	font-size: 80px;
+}
+
+.option1:hover {
+	background-color: rgba(181, 179, 255, 0.1);
+	border: none;
+    border-radius: 3px;
+}
+
+#infoimg {
+	position: relative;
+	left: 1475px;
+	top: 700px;
+	width: 35px;
+	height: 35px;
+}
+
+#tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+#tooltip #tooltiptext {
+    visibility: hidden;
+    width: 170px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 1;
+    top: 560px;
+    left: 1300px;
+}
+
+#tooltip:hover #tooltiptext {
+    visibility: visible;
+}
+
+#option2 {
+	display: none;
+}
+
+#level1tekst {
+	display: none;
+	color: white;
+}
+
+#level2tekst {
+	color: white;
+	display: none;
+}
+
+#kelderbutton {
+	display: none;
+}
+
+#ladebutton {
+	display: none;
+}
+
+#zaklamp {
+	display: none;
+	height: 150px;
+	width: 200px;
+	position: absolute;
+	left: 500px;
+	top: 450px;
+}
+
+#sleutels {
+	display: none;
+	position: absolute;
+	width: 180px;
+	height: 180px;
+	top: 450px;
+	left: 630px;
+}
+
+#level3tekst {
+	display: none;
+	color: white;
+}
+
+#option4 {
+	display: none;
+}
+
+#licht {
+	display: none;
+}
+
+
+
+#handschoenen {
+	display: none;
+	width: 120px;
+	height: 120px;
+	position: absolute;
+	top: 330px;
+	left: 1350px;
+}
+
+#option4 {
+	display: none;
+}
+
+#warning {
+	background: rgba(255,255,255,0.6);
+	padding: 25px;
+}
+
+#text {
+	color: blue;
+}
+
+#politieauto1 {
+	display: none;
+	position: absolute;
+	top: 550px;
+	left: 70px;
+}
+
+#politieauto2 {
+	display: none;
+	position: absolute;
+	top: 550px;
+	left: 1200px;
+	width: 250px;
+	height: 150px;
+}
+
+#dief {
+	display: none;
+	position: absolute;
+	top: 520px;
+	left: 700px;
+	width: 80px;
+	height: 80px;
+}
